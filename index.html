@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="frame">
+        <div class="box1">
+            <input type="button" value="Sign in" id="signinbt">
+            <div class="innerf1" id="innerf1">
+                <h1>Sign in</h1>
+                <br>
+                <nav>
+                    <input type="text" name="textbox" id="namebox" placeholder="Name">
+                </nav>
+                <br>
+                <nav>
+                    <input type="text" name="textbox" id="emailbox" placeholder="E-mail">
+                </nav>
+                <br>
+                
+                <input type="button" value="Sign in" id="signin">
+                <br>
+                <input type="button" value="Back" id="back">
+                
+            </div>
+            
+        </div>
+        
+        <div class="box2">
+            <input type="button" value="Sign up" id="signupbt">
+            <div class="innerf2" id="innerf2">
+                <h1 id="signupl">Sign up</h1>
+                <br>
+                <nav>
+                    <input type="text" name="textbox" id="namebox" placeholder="Name">
+                </nav>
+                <br>
+                <nav>
+                    <input type="text" name="textbox" id="surnamebox" placeholder="Surname">
+                </nav>
+                <br>
+                <nav>
+                    <input type="email" name="textbox" id="emailbox" placeholder="E-mail">
+                </nav>
+                <br>
+                
+                <input type="button" value="Sign up" id="signup">
+                <br>
+                <input type="button" value="Back" id="back1">
+                
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        let signin = document.getElementById('signinbt')
+        let signup = document.getElementById('signupbt')
+        let box1 = document.getElementById('innerf1')
+        let box2 = document.getElementById('innerf2')
+        let bck = document.getElementById('back')
+        let bck1 = document.getElementById('back1')
+        let signupbt = document.getElementById('signup')
+        let signinbt = document.getElementById('signin')
+        let namebox = document.getElementById('namebox')
+
+
+        signin.addEventListener('click', ()=>{
+            signin.style.display = 'none'
+            box1.style.display = 'flex'
+            signup.style.display = 'flex'
+            box2.style.display = 'none'
+            
+        })
+        bck.addEventListener('click', ()=>{
+            signin.style.display = 'flex'
+            box1.style.display = 'none'
+        })
+        signup.addEventListener('click', ()=>{
+            signup.style.display = 'none'
+            box2.style.display = 'flex'
+            signin.style.display = 'flex'
+            box1.style.display = 'none'
+        })
+        bck1.addEventListener('click', ()=>{
+            signup.style.display = 'flex'
+            box2.style.display = 'none'
+        })
+
+    </script>
+    
+</body>
+</html>
